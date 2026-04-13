@@ -103,3 +103,28 @@ html, body {
 .notion-page-title-icon {
   display: none !important;
 }
+
+/* Remove all other possible lines in gallery/works page */
+.notion-collection-card-cover {
+  border-bottom: none !important;
+}
+
+.notion-collection-header {
+  border-bottom: none !important;
+  display: none !important; /* Often just "Works" title with line you don't want */
+}
+
+/* Reset dark mode borders/shadows that react-notion-x forces */
+.notion-dark-theme .notion-collection-card,
+.notion-collection-card {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.notion-collection-item {
+  border-bottom: none !important;
+}
+
+.notion-list-view, .notion-board-view {
+  border: none !important;
+}
