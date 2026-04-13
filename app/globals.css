@@ -27,7 +27,7 @@ html, body {
 /* Card background */
 .notion-collection-card {
   background-color: rgba(255, 255, 255, 0.04) !important;
-  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border: none !important;
   border-radius: 6px !important;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
@@ -37,7 +37,6 @@ html, body {
 .notion-collection-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
-  border-color: rgba(255, 255, 255, 0.2) !important;
 }
 
 .notion-collection-card-cover img {
@@ -82,4 +81,18 @@ html, body {
 .notion-title {
   font-weight: 800;
   letter-spacing: -0.02em;
+}
+
+/* Remove all structural lines */
+.notion-hr {
+  border-top: none !important;
+  background: transparent !important;
+}
+
+.notion-collection-gallery,
+.notion-collection-list,
+.notion-table,
+.notion-table td,
+.notion-table th {
+  border: none !important;
 }
