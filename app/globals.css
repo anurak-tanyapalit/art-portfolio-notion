@@ -1,6 +1,6 @@
 /* Custom properties matching Notion Dark Theme */
 :root {
-  --bg-color: #191919;
+  --bg-color: #121212;
   --text-main: rgba(255, 255, 255, 0.81);
   --text-secondary: rgba(255, 255, 255, 0.444);
 }
