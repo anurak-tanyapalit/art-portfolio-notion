@@ -4,8 +4,6 @@
 
 :root {
   --bg-color: #05070a;
-  --bg-gradient-1: #0a0f1a;
-  --bg-gradient-2: #020304;
 
   --text-main: rgba(255, 255, 255, 0.9);
   --text-secondary: rgba(255, 255, 255, 0.55);
@@ -89,4 +87,12 @@ body::before {
 
 * {
   transition: all 0.4s ease;
+}
+
+.notion-collection-card {
+  border-radius: 6px !important;
+}
+
+.notion-collection-card-cover img {
+  box-shadow: 0 0 40px rgba(0, 100, 255, 0.15);
 }
