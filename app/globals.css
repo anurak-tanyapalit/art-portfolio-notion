@@ -139,3 +139,24 @@ html, body {
   height: 0 !important;
   margin: 0 !important;
 }
+
+/* FALLBACK: If any line refuses to be deleted, blend it into the background */
+.notion-hr,
+.notion-divider,
+.notion-hr div,
+.notion-divider div,
+.notion-header,
+.notion-nav-header,
+.notion-page-header,
+.notion-collection-header,
+.notion-title,
+.notion-page {
+  border-color: #0d0d0d !important;
+  outline-color: #0d0d0d !important;
+}
+
+/* Fix for inner divs of dividers that might use background-color for the line */
+.notion-hr div,
+.notion-divider div {
+  background-color: #0d0d0d !important;
+}
