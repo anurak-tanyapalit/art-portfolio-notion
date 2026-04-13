@@ -57,9 +57,11 @@ html, body {
 /* Header */
 .notion-header,
 .notion-nav-header,
-.notion-topbar {
+.notion-topbar,
+.notion-page-header {
   background-color: #0d0d0d !important;
   border-bottom: none !important;
+  box-shadow: none !important;
 }
 
 /* Page content */
@@ -127,4 +129,13 @@ html, body {
 
 .notion-list-view, .notion-board-view {
   border: none !important;
+}
+
+/* Hard reset for dividers */
+.notion-hr,
+.notion-divider {
+  border: none !important;
+  background: transparent !important;
+  height: 0 !important;
+  margin: 0 !important;
 }
