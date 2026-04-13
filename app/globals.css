@@ -3,7 +3,7 @@
 ========================= */
 
 :root {
-  --bg-color: #252525;
+  --bg-color: #303030;
   --text-main: rgba(255, 255, 255, 0.88);
   --text-secondary: rgba(255, 255, 255, 0.5);
 }
@@ -34,7 +34,7 @@ body {
   background: radial-gradient(
     circle at center,
     #111 0%,
-    #292929 100%
+    #303030 100%
   ) !important;
 }
 
