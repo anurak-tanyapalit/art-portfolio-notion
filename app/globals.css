@@ -1,27 +1,89 @@
 /* =========================
-   FORCE DARK MODE (CORE)
+   BACKGROUND — ALL SURFACES
 ========================= */
 :root {
-  --bg-color: #0d0f14;
-  --surface-1: #111520;
-  --surface-2: rgba(99, 120, 180, 0.06);
-  --text-main: rgba(220, 225, 240, 0.92);
-  --text-secondary: rgba(160, 170, 200, 0.55);
-  --border-subtle: rgba(99, 120, 180, 0.12);
-  --border-hover: rgba(99, 120, 180, 0.22);
+  --bg-color: #090e11;
+  --surface-1: #0d1518;
+  --surface-2: rgba(80, 160, 140, 0.05);
+  --text-main: rgba(210, 228, 224, 0.90);
+  --text-secondary: rgba(150, 185, 178, 0.52);
+  --border-subtle: rgba(80, 160, 140, 0.10);
+  --border-hover: rgba(80, 160, 140, 0.20);
 }
-html, body {
+
+html, body,
+.notion-app,
+.notion-app-inner,
+.notion-cursor-listener,
+.notion-frame,
+.notion-scroller,
+.notion-scroller.vertical,
+.notion-page-content,
+.notion-page-content-inner,
+.notion-sidebar,
+.notion-sidebar-container,
+.notion-peek-renderer,
+.notion-overlay-container,
+[class*="notion-dark"] {
   background-color: var(--bg-color) !important;
   color: var(--text-main) !important;
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
 }
-.notion-app {
+
+/* Page wrapper และ content area */
+.notion-page,
+.notion-page-block,
+.notion-collection-page,
+.notion-collection-view-page-block {
   background-color: var(--bg-color) !important;
 }
-.notion-page-content {
+
+/* Header / topbar */
+.notion-topbar,
+.notion-topbar-container,
+[class*="topbar"] {
+  background-color: var(--bg-color) !important;
+}
+
+/* Sidebar */
+.notion-sidebar,
+[class*="sidebar"] {
+  background-color: var(--surface-1) !important;
+}
+
+/* Collection / gallery background */
+.notion-collection,
+.notion-collection-view,
+.notion-collection-view-body,
+.notion-collection-board,
+.notion-collection-gallery,
+.notion-collection-list,
+.notion-collection-table {
   background: transparent !important;
+}
+
+/* Card */
+.notion-collection-card {
+  background-color: var(--surface-2) !important;
+  border: 0.5px solid var(--border-subtle) !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+  box-shadow: none !important;
+  transition: transform 0.5s ease, background-color 0.5s ease, border-color 0.5s ease !important;
+}
+.notion-collection-card:hover {
+  transform: translateY(-6px);
+  background-color: rgba(80, 160, 140, 0.09) !important;
+  border-color: var(--border-hover) !important;
+}
+
+/* Card image */
+.notion-collection-card-cover img {
+  transition: transform 0.6s ease, filter 0.6s ease;
+  filter: grayscale(20%) brightness(0.88) contrast(108%);
+}
+.notion-collection-card:hover img {
+  transform: scale(1.03);
+  filter: none;
 }
 
 /* =========================
@@ -30,8 +92,8 @@ html, body {
 body {
   background: radial-gradient(
     ellipse at 50% 0%,
-    #141a28 0%,
-    #0d0f14 60%
+    #0d1a1e 0%,
+    #090e11 55%
   ) !important;
 }
 body::after {
@@ -41,39 +103,11 @@ body::after {
   width: 100%; height: 100%;
   pointer-events: none;
   background: radial-gradient(
-    circle at 50% 25%,
-    rgba(74, 111, 165, 0.06),
+    circle at 50% 30%,
+    rgba(60, 140, 120, 0.04),
     transparent 60%
   );
   mix-blend-mode: screen;
-}
-
-/* =========================
-   COLLECTION (WORKS GRID)
-========================= */
-.notion-collection-gallery {
-  gap: 28px !important;
-}
-.notion-collection-card {
-  background-color: var(--surface-2) !important;
-  border: 0.5px solid var(--border-subtle) !important;
-  border-radius: 16px !important;
-  overflow: hidden;
-  transition: transform 0.5s ease, background-color 0.5s ease, border-color 0.5s ease !important;
-  box-shadow: none !important;
-}
-.notion-collection-card:hover {
-  transform: translateY(-6px);
-  background-color: rgba(99, 120, 180, 0.11) !important;
-  border-color: var(--border-hover) !important;
-}
-.notion-collection-card-cover img {
-  transition: transform 0.6s ease, filter 0.6s ease;
-  filter: grayscale(25%) brightness(0.85) contrast(105%);
-}
-.notion-collection-card:hover img {
-  transform: scale(1.03);
-  filter: none;
 }
 
 /* =========================
@@ -85,24 +119,36 @@ body::after {
   line-height: 1.2;
   color: var(--text-main) !important;
 }
-.notion-text {
+.notion-text,
+.notion-page-block .notion-collection-card-property {
   line-height: 1.8;
-  max-width: 680px;
+  color: var(--text-secondary) !important;
+}
+
+/* Breadcrumb / topbar text */
+.notion-topbar-breadcrumb,
+[class*="breadcrumb"] {
   color: var(--text-secondary) !important;
 }
 
 /* =========================
-   REMOVE WHITE ELEMENTS
+   DIVIDERS & BORDERS
 ========================= */
-.notion-collection {
-  background: transparent !important;
-}
-.notion-page-cover {
-  filter: brightness(0.55) saturate(0.7);
+.notion-collection-header,
+[class*="divider"] {
+  border-color: var(--border-subtle) !important;
+  opacity: 1 !important;
 }
 
 /* =========================
-   GLOBAL TRANSITIONS (SCOPED)
+   PAGE COVER
+========================= */
+.notion-page-cover {
+  filter: brightness(0.55) saturate(0.6);
+}
+
+/* =========================
+   TRANSITIONS (SCOPED)
 ========================= */
 *, *::before, *::after {
   transition:
