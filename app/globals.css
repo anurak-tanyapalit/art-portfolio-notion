@@ -1,26 +1,57 @@
-@import "tailwindcss";
-
+/* Custom properties matching Notion Dark Theme */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --bg-color: #191919;
+  --text-main: rgba(255, 255, 255, 0.81);
+  --text-secondary: rgba(255, 255, 255, 0.444);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Add micro-animations to notion images */
+.notion-page-cover {
+  filter: brightness(0.7);
+}
+
+.notion-collection-gallery {
+  gap: 24px;
+}
+
+.notion-collection-card {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.notion-collection-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.notion-collection-card-cover img {
+  transition: transform 0.5s ease;
+}
+
+.notion-collection-card:hover .notion-collection-card-cover img {
+  transform: scale(1.05);
+}
+
+/* Overall overrides */
+.notion-app {
+  background: transparent !important;
+}
+
+.notion-title {
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
