@@ -1,13 +1,66 @@
-/* FORCE DARK MODE */
-
-html, body {
-  background-color: #0d0d0d !important;
-  color: rgba(255,255,255,0.85) !important;
+/* Custom properties matching Notion Dark Theme */
+:root {
+  --bg-color: #0d0d0d;
+  --text-main: rgba(255, 255, 255, 0.85);
+  --text-secondary: rgba(255, 255, 255, 0.444);
 }
 
+/* FORCE DARK MODE */
+html, body {
+  background-color: #0d0d0d !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Add micro-animations to notion images */
+.notion-page-cover {
+  filter: brightness(0.7);
+}
+
+.notion-collection-gallery {
+  gap: 24px;
+}
+
+/* Card background */
+.notion-collection-card {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 6px !important;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.notion-collection-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.notion-collection-card-cover img {
+  transition: transform 0.5s ease;
+  box-shadow: 0 0 40px rgba(0, 100, 255, 0.15);
+}
+
+.notion-collection-card:hover .notion-collection-card-cover img {
+  transform: scale(1.05);
+}
+
+/* Overall overrides */
 /* Notion main container */
 .notion-app {
   background-color: #0d0d0d !important;
+}
+
+/* Header */
+.notion-header,
+.notion-nav-header,
+.notion-topbar {
+  background-color: #0d0d0d !important;
+  border-bottom: none !important;
 }
 
 /* Page content */
@@ -20,21 +73,13 @@ html, body {
   background: transparent !important;
 }
 
-/* Card background */
-.notion-collection-card {
-  background-color: rgba(255,255,255,0.04) !important;
-}
-
 /* Text color */
 .notion-text,
 .notion-title {
-  color: rgba(255,255,255,0.85) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
 }
 
-.notion-collection-card {
-  border-radius: 6px !important;
-}
-
-.notion-collection-card-cover img {
-  box-shadow: 0 0 40px rgba(0, 100, 255, 0.15);
+.notion-title {
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
