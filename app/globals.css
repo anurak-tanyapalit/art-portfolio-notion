@@ -1,160 +1,32 @@
-/* =========================
-   BACKGROUND — ALL SURFACES
-========================= */
-:root {
-  --bg-color: #090e11;
-  --surface-1: #090e11;
-  --surface-2: rgba(80, 160, 140, 0.00);
-  --text-main: rgba(210, 228, 224, 0.00);
-  --text-secondary: rgba(150, 185, 178, 0.00);
-  --border-subtle: rgba(80, 160, 140, 0.00);
-  --border-hover: rgba(80, 160, 140, 0.00);
+/* FORCE DARK MODE */
+
+html, body {
+  background-color: #0d0d0d !important;
+  color: rgba(255,255,255,0.85) !important;
 }
 
-html, body,
-.notion-app,
-.notion-app-inner,
-.notion-cursor-listener,
-.notion-frame,
-.notion-scroller,
-.notion-scroller.vertical,
-.notion-page-content,
-.notion-page-content-inner,
-.notion-sidebar,
-.notion-sidebar-container,
-.notion-peek-renderer,
-.notion-overlay-container,
-[class*="notion-dark"] {
-  background-color: var(--bg-color) !important;
-  color: var(--text-main) !important;
+/* Notion main container */
+.notion-app {
+  background-color: #0d0d0d !important;
 }
 
-/* Page wrapper และ content area */
-.notion-page,
-.notion-page-block,
-.notion-collection-page,
-.notion-collection-view-page-block {
-  background-color: var(--bg-color) !important;
+/* Page content */
+.notion-page-content {
+  background-color: transparent !important;
 }
 
-/* Header / topbar */
-.notion-topbar,
-.notion-topbar-container,
-[class*="topbar"] {
-  background-color: var(--bg-color) !important;
-}
-
-/* Sidebar */
-.notion-sidebar,
-[class*="sidebar"] {
-  background-color: var(--surface-1) !important;
-}
-
-/* Collection / gallery background */
-.notion-collection,
-.notion-collection-view,
-.notion-collection-view-body,
-.notion-collection-board,
-.notion-collection-gallery,
-.notion-collection-list,
-.notion-collection-table {
+/* Remove white blocks */
+.notion-collection {
   background: transparent !important;
 }
 
-/* Card */
+/* Card background */
 .notion-collection-card {
-  background-color: var(--surface-2) !important;
-  border: 0.5px solid var(--border-subtle) !important;
-  border-radius: 16px !important;
-  overflow: hidden;
-  box-shadow: none !important;
-  transition: transform 0.5s ease, background-color 0.5s ease, border-color 0.5s ease !important;
-}
-.notion-collection-card:hover {
-  transform: translateY(-6px);
-  background-color: rgba(80, 160, 140, 0.09) !important;
-  border-color: var(--border-hover) !important;
+  background-color: rgba(255,255,255,0.04) !important;
 }
 
-/* Card image */
-.notion-collection-card-cover img {
-  transition: transform 0.6s ease, filter 0.6s ease;
-  filter: grayscale(20%) brightness(0.88) contrast(108%);
-}
-.notion-collection-card:hover img {
-  transform: scale(1.03);
-  filter: none;
-}
-
-/* =========================
-   DEPTH / ATMOSPHERE
-========================= */
-body {
-  background: radial-gradient(
-    ellipse at 50% 0%,
-    #090e11 0%,
-    #090e11 55%
-  ) !important;
-}
-body::after {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  pointer-events: none;
-  background: radial-gradient(
-    circle at 50% 30%,
-    rgba(60, 140, 120, 0.04),
-    transparent 60%
-  );
-  mix-blend-mode: screen;
-}
-
-/* =========================
-   TYPOGRAPHY
-========================= */
-.notion-title {
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  line-height: 1.2;
-  color: var(--text-main) !important;
-}
+/* Text color */
 .notion-text,
-.notion-page-block .notion-collection-card-property {
-  line-height: 1.8;
-  color: var(--text-secondary) !important;
-}
-
-/* Breadcrumb / topbar text */
-.notion-topbar-breadcrumb,
-[class*="breadcrumb"] {
-  color: var(--text-secondary) !important;
-}
-
-/* =========================
-   DIVIDERS & BORDERS
-========================= */
-.notion-collection-header,
-[class*="divider"] {
-  border-color: var(--border-subtle) !important;
-  opacity: 1 !important;
-}
-
-/* =========================
-   PAGE COVER
-========================= */
-.notion-page-cover {
-  filter: brightness(0.55) saturate(0.6);
-}
-
-/* =========================
-   TRANSITIONS (SCOPED)
-========================= */
-*, *::before, *::after {
-  transition:
-    background-color 0.4s ease,
-    color 0.4s ease,
-    border-color 0.4s ease,
-    opacity 0.4s ease,
-    transform 0.4s ease;
+.notion-title {
+  color: rgba(255,255,255,0.85) !important;
 }
