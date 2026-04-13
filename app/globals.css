@@ -156,7 +156,25 @@ html, body {
 }
 
 /* Fix for inner divs of dividers that might use background-color for the line */
-.notion-hr div,
-.notion-divider div {
-  background-color: #0d0d0d !important;
+/* FALLBACK: Nuclear option to hide all lines */
+.notion-app hr,
+.notion-app .notion-hr,
+.notion-app .notion-divider {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  border: none !important;
+}
+
+.notion-app,
+.notion-app [class*="notion-"] {
+  border-color: #0d0d0d !important;
+  outline-color: #0d0d0d !important;
+  box-shadow: none !important;
+}
+
+/* Also specifically target the page header area */
+.notion-page-header {
+  border-bottom: none !important;
 }
