@@ -4,11 +4,11 @@
 :root {
   --bg-color: #090e11;
   --surface-1: #090e11;
-  --surface-2: rgba(80, 160, 140, 0.05);
-  --text-main: rgba(210, 228, 224, 0.90);
-  --text-secondary: rgba(150, 185, 178, 0.52);
-  --border-subtle: rgba(80, 160, 140, 0.10);
-  --border-hover: rgba(80, 160, 140, 0.20);
+  --surface-2: rgba(80, 160, 140, 0.00);
+  --text-main: rgba(210, 228, 224, 0.00);
+  --text-secondary: rgba(150, 185, 178, 0.00);
+  --border-subtle: rgba(80, 160, 140, 0.00);
+  --border-hover: rgba(80, 160, 140, 0.00);
 }
 
 html, body,
