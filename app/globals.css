@@ -1,13 +1,13 @@
 /* Custom properties matching Notion Dark Theme */
 :root {
-  --bg-color: #020403;
+  --bg-color: #202124;
   --text-main: rgba(255, 255, 255, 0.85);
   --text-secondary: rgba(255, 255, 255, 0.444);
 }
 
 /* FORCE DARK MODE */
 html, body {
-  background-color: #020403 !important;
+  background-color: #202124 !important;
   color: rgba(255, 255, 255, 0.85) !important;
   margin: 0;
   padding: 0;
@@ -51,7 +51,7 @@ html, body {
 /* Overall overrides */
 /* Notion main container */
 .notion-app {
-  background-color: #020403 !important;
+  background-color: #202124 !important;
 }
 
 /* Header */
@@ -59,7 +59,7 @@ html, body {
 .notion-nav-header,
 .notion-topbar,
 .notion-page-header {
-  background-color: #020403 !important;
+  background-color: #202124 !important;
   border-bottom: none !important;
   box-shadow: none !important;
 }
@@ -151,8 +151,8 @@ html, body {
 .notion-collection-header,
 .notion-title,
 .notion-page {
-  border-color: #020403 !important;
-  outline-color: #020403 !important;
+  border-color: #202124 !important;
+  outline-color: #202124 !important;
 }
 
 /* Fix for inner divs of dividers that might use background-color for the line */
@@ -169,8 +169,8 @@ html, body {
 
 .notion-app,
 .notion-app [class*="notion-"] {
-  border-color: #020403 !important;
-  outline-color: #020403 !important;
+  border-color: #202124 !important;
+  outline-color: #202124 !important;
   box-shadow: none !important;
 }
 
