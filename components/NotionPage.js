@@ -4,6 +4,7 @@ import React from 'react'
 import { NotionRenderer } from 'react-notion-x'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
+import { inverseSlugMap } from '@/lib/config'
 
 // core styles shared by all of react-notion-x (required)
 import 'react-notion-x/src/styles.css'
@@ -32,7 +33,10 @@ export default function NotionPage({ recordMap }) {
         recordMap={recordMap}
         fullPage={true}
         darkMode={true}
-        mapPageUrl={(pageId) => `/${pageId}`}
+        mapPageUrl={(pageId) => {
+          const cleanId = pageId.replace(/-/g, '')
+          return inverseSlugMap[cleanId] ? `/${inverseSlugMap[cleanId]}` : `/${cleanId}`
+        }}
         components={{
           nextLink: Link,
           Collection,

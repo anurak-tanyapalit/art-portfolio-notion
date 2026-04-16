@@ -1,11 +1,13 @@
 import { NotionAPI } from 'notion-client'
+import { customSlugMap } from '@/lib/config'
 import NotionPage from '@/components/NotionPage'
 
 export const revalidate = 60
 
 export default async function Page({ params }) {
   const notion = new NotionAPI()
-  const { pageId } = await params
+  const { pageId: rawPageId } = await params
+  const pageId = customSlugMap[rawPageId] || rawPageId
   
   let recordMap;
   try {
