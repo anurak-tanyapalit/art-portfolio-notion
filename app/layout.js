@@ -4,8 +4,31 @@ import { Plus_Jakarta_Sans } from 'next/font/google'
 const font = Plus_Jakarta_Sans({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Art Portfolio',
-  description: 'My art portfolio powered by Notion',
+  metadataBase: new URL('https://www.anurak-tanyapalit.site'),
+  title: {
+    default: 'Anurak Tanyapalit | Art Portfolio',
+    template: '%s | Anurak Tanyapalit',
+  },
+  description: 'Discover the art portfolio and creative works of Anurak Tanyapalit.',
+  openGraph: {
+    title: 'Anurak Tanyapalit | Art Portfolio',
+    description: 'Discover the art portfolio and creative works of Anurak Tanyapalit.',
+    url: 'https://www.anurak-tanyapalit.site',
+    siteName: 'Anurak Tanyapalit',
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 export default function RootLayout({ children }) {
