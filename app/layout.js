@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
           <footer style={{
             textAlign: 'center',
             padding: '24px 0',
-            fontSize: '0.875rem',
+            fontSize: '0.5rem',
             color: 'var(--text-secondary)',
             backgroundColor: 'transparent',
             marginTop: 'auto'
