@@ -107,7 +107,13 @@ html, body {
 .notion-page-icon-inline,
 .notion-property-page-icon,
 .notion-title .notion-page-icon,
-.notion-title svg {
+.notion-title svg,
+.notion-link-mention-icon,
+.notion-link-mention-preview-icon,
+.notion-bookmark-link-icon,
+.notion-page-link svg,
+.notion-page-icon-span,
+.notion-emoji {
   display: none !important;
 }
 
