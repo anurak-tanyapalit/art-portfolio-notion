@@ -44,10 +44,10 @@ export default function RootLayout({ children }) {
             padding: '24px 0',
             fontSize: '0.875rem',
             color: 'var(--text-secondary)',
-            backgroundColor: 'var(--bg-color)',
+            backgroundColor: 'transparent',
             marginTop: 'auto'
           }}>
-            © 2026 All copyright reserved
+            © 2026 All copyleft reserved
           </footer>
         </div>
       </body>
