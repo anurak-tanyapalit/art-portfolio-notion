@@ -102,7 +102,12 @@ html, body {
 /* Hide page icons next to titles */
 .notion-page-icon,
 .notion-page-icon-wrapper,
-.notion-page-title-icon {
+.notion-page-title-icon,
+.notion-title-icon,
+.notion-page-icon-inline,
+.notion-property-page-icon,
+.notion-title .notion-page-icon,
+.notion-title svg {
   display: none !important;
 }
 
